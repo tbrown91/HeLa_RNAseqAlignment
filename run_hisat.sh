@@ -21,10 +21,10 @@ samtools view -h -q 40 -f 163 -F 3852 -bS HeLa_RNAseq_DMSOrep2.sam > HeLa_RNAseq
 samtools view -h -q 40 -f 83 -F 3852 -bS HeLa_RNAseq_DMSOrep2.sam > HeLa_RNAseq_DMSOrep2Plus_2.bam 
 
 #Combine pairs of reads from same strand
-samtools merge HeLa_RNAseq_DMSOrep1Plus_merge.bam HeLa_RNAseq_DMSOrep1Plus_1.bam HeLa_RNAseq_DMSOrep1Plus_1.bam &
-samtools merge HeLa_RNAseq_DMSOrep1Minus_merge.bam HeLa_RNAseq_DMSOrep1Minus_1.bam HeLa_RNAseq_DMSOrep1Minus_1.bam &
-samtools merge HeLa_RNAseq_DMSOrep2Plus_merge.bam HeLa_RNAseq_DMSOrep2Plus_1.bam HeLa_RNAseq_DMSOrep2Plus_1.bam &
-samtools merge HeLa_RNAseq_DMSOrep2Minus_merge.bam HeLa_RNAseq_DMSOrep2Minus_1.bam HeLa_RNAseq_DMSOrep2Minus_1.bam
+samtools merge HeLa_RNAseq_DMSOrep1Plus_merge.bam HeLa_RNAseq_DMSOrep1Plus_1.bam HeLa_RNAseq_DMSOrep1Plus_2.bam &
+samtools merge HeLa_RNAseq_DMSOrep1Minus_merge.bam HeLa_RNAseq_DMSOrep1Minus_1.bam HeLa_RNAseq_DMSOrep1Minus_2.bam &
+samtools merge HeLa_RNAseq_DMSOrep2Plus_merge.bam HeLa_RNAseq_DMSOrep2Plus_1.bam HeLa_RNAseq_DMSOrep2Plus_2.bam &
+samtools merge HeLa_RNAseq_DMSOrep2Minus_merge.bam HeLa_RNAseq_DMSOrep2Minus_1.bam HeLa_RNAseq_DMSOrep2Minus_2.bam
 
 #Sort bam files and index
 samtools sort HeLa_RNAseq_DMSOrep1Plus_merge.bam HeLa_RNAseq_DMSOrep1Plus_sorted &
